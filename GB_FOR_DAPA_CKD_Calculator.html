@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=1024, height=768, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>DAPA_CKD_Calculator</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery-3.2.1.min.js"></script> 
+<script src="js/jquery-ui.min.js"></script> 
+<script src="js/script.js"></script> 
+<!--<script src="js/baseScript.js"></script> -->
+<script src="js/jquery.touchSwipe.min.js"></script> 
+<script src="js/jquery.tap.js"></script> 
+<script src="js/dapa.calc.js"></script>
+<script>
+      $(function() {
+        $(".wrapper,.container,.overlay,#section_container,#info_wrapper,#info_overlay,#close_info").bind("touchmove",
+          function(e) {
+            //Add all the links to prevent the touchmove
+            e.preventDefault();
+          }
+        );
+      });
+    </script> 
+<script>
+document.addEventListener('touchmove', event => {
+    event.preventDefault()
+  }, {
+    capture: false,
+    once: false,
+    passive: false
+  });      
+   $(function() {
+   $(".wrapper").bind("touchmove", function(e) {   //Add all the links to prevent the touchmove
+      e.preventDefault();
+      });
+    })   
+</script>
+</head>
+<!--NOTE: DO NOT CHANGE THE TEMPLATE!!!!!!!!!!!!!!NOTE: DO NOT CHANGE THE TEMPLATE!!!!!!!!!!!!!!NOTE: DO NOT CHANGE THE TEMPLATE!!!!!!!!!!!!!!!!!!!-->
+
+<body>
+<div id="wrapperImg"> <img src="images/image.jpg" width="1024" height="768" alt="" /> </div>
+<div class="wrapper">
+  <div class="container"> 
+    <!-- main content -->
+    <div id="splash_01"></div>
+    <div id="head1">DAPA-CKD: PREDICTIVE IMPACT MODEL</div>
+    <label for="population_options" class="population">POPULATION</label>
+    <select name="population_options" class="dropdown" id="population_options">	
+      <option value="Full population">Full population</option>
+      <option value="Aged ≥ 65 years">Aged ≥ 65 years</option>
+      <option value="Aged < 65 years">Aged &lt; 65 years</option>
+      <option value="T2DM">T2DM</option>
+      <option value="No T2DM">No T2DM</option>
+     <!-- <option value="CV Disease">CV Disease</option>
+      <option value="No CV Disease">No CV Disease</option>-->
+      <option value="eGFR ≥ 45 mL/min/1,73m2">eGFR ≥ 45 mL/min/1.73m&sup2;</option>
+      <option value="eGFR < 45 mL/min/1,73m2" selected>eGFR &lt; 45 mL/min/1.73m&sup2;</option>
+    <!--  <option value="eGFR ≥ 50 mL/min/1,73m2">eGFR ≥ 50 mL/min/1.73m&sup2;</option>
+      <option value="eGFR < 50 mL/min/1,73m2">eGFR &lt; 50 mL/min/1.73m&sup2;</option>
+      <option value="UACR ≤ 1000">UACR ≤ 1000</option>
+      <option value="UACR > 1000">UACR &gt; 1000</option>-->
+      <option value="No T2DM with eGFR ≥ 30 & No HF">No T2DM with eGFR ≥ 30 & No HF</option>
+    </select>
+    <label for="time_options" class="time">Time horizon (years)</label>
+    <label for="time_options" class="time-error" id="time-error">Time horizon should be between 1 to 10 years.</label>
+    <input type="text" id="time" name="time" class="time_horizon" max="10" min="0">
+    <label for="cohort_options" class="cohort">PATIENT NUMBERS</label>
+    <input type="text" id="patient_number" name="time" class="patient_number">
+    <label for="outcome_options" class="outcome">OUTCOME OF VIEW*</label>
+    <select name="outcome_options" class="dropdown outcome1 drop2" id="outcome_options">		
+      <option value="≥ 50% sustained decline in eGFR">≥ 50% sustained decline in eGFR</option>
+      <option value="ESRD">ESRD</option>
+      <option value="All Cause Mortality" selected>All Cause Mortality</option>
+      <option value="Hospitalisation for HF">Hospitalisation for HF</option>
+      <!-- <option value="MI">MI</option>
+      <option value="Stroke">Stroke</option>
+      <option value="AKI">AKI</option> -->
+      <option value="CV Death">CV Death</option>
+      <option value="Renal Death">Renal Death</option>
+    </select>
+    <div id="number"><span>Estimated Number of <span class="outcome_view"></span> Events over <span class="years"></span> years</span></div>
+    <div id="dapagliflozin1">Dapagliflozin</div>
+    <div id="placebo1">Placebo</div>
+    <div id="incremental1">Incremental</div>
+    <div id="dapaValue1">0</div>
+    <div id="placeboValue1">0</div>
+    <div id="incrementalValue1">0</div>
+    <div id="cv_death"><span class="outcome_view"></span></div>
+    <div id="mean"><span>Estimated Mean time to <span class="outcome_view"></span> (years)</span></div>
+    <div id="dapagliflozin2">Dapagliflozin</div>
+    <div id="placebo2">Placebo</div>
+    <div id="incremental2">Incremental</div>
+    <div id="dapaValue2">0</div>
+    <div id="placeboValue2">0</div>
+    <div id="incrementalValue2">0</div>
+    <button type="button" id="infoBtn">INFORMATION AND ASSUMPTIONS</button>
+    <!--    <button type="button" id="disclaimerBtn">disclaimer</button>-->
+	  <div id="estimated" style="transform: none;">Estimated</div>
+    <div id="largeValue"><span>0</span></div>
+    <div id="less_txt"><span><span class="determiner">Fewer</span> patients with '<span class="outcome_view"></span>' over <span class="years"></span> years</span></div>
+	  
+	  <div id="disclaimer">*Modelled events have been aligned to the individual component endpoints of DAPA-CKD</div>
+	  
+<!--	   <div class="globalclick" href="javascript:void(0);" goto="veeva:gotoSlide(GB_FOR_DAPA_Cover.zip, FOR_NEPH_Z4_47242)"></div> -->
+	  <div id="info_overlay" class="noSwipe"></div>
+  <div id="info_wrapper" class="noSwipe">
+    <div id="assumptions">Assumptions:</div>
+    <ul id="assumptions_list">
+      <li>This information is based on a DAPA-CKD time to event (TTE) model intended to quantify and communicate the benefit in terms of delaying events associated with CKD associated with dapagliflozin and placebo in addition to SoC based on the results of the DAPA-CKD trial.</li>
+      <li>The model predicts the time-to event data for patients receiving treatment with dapagliflozin or placebo, based on observations from DAPA-CKD.</li>
+      <li>The model was developed as a closed cohort-level partitioned survival model (PSM), whereby patients reside in one of a series of exhaustive and mutually exclusive health states with time-dependent health state membership determined fully by a series of independently modelled non-mutually exclusive survival curves.</li>
+      <li>The incidence of outcomes can be adjusted for estimated all-<br>
+        cause mortality based on the results of DAPA-CKD, such that the numbers of patients at risk of experiencing clinical outcomes will decrease over the modelled time horizon in line with the results observed in DAPA-CKD.</li>
+      <li>The model estimates outcomes over a variable time horizon of up to thirty years and has a monthly cycle length. Mean and incremental time to event estimates are derived from a lifetime perspective (e.g. the mean time to event may be more than the select time horizon).</li>
+    </ul>
+    <div id="limitations">Limitations:</div>
+    <ul id="limitations_list">
+      <li>One of the central limitations of the PSM approach is the key structural assumption that the survival functions for each of the health states are independent, which represents a significant limitation when extrapolating results.</li>
+      <li>Competing risks are not considered and mortality risks will be assumed to apply equally to all patients.</li>
+      <li>This model provides an estimate only of estimated events based on DAPA-CKD.</li>
+    </ul>
+    <div id="close_info" class="noSwipe"></div>
+  </div>
+  </div>
+</div>
+<script type="text/javascript" src="./js/survivalParams.js"></script>
+<script type="text/javascript" src="./js/statisticalFunc.js"></script>
+<script type="text/javascript" src="./js/survivalFnc.js"></script>
+<script type="text/javascript" src="./js/calcScript.js"></script>
+</body>
+</html>

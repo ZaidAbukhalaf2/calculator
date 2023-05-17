@@ -1,0 +1,591 @@
+@charset "utf-8";
+/* CSS Document */
+/* 
+ * NOTE: DO NOT CHANGE THE TEMPLATE!!!!!!!!!!!!!!NOTE: DO NOT CHANGE THE TEMPLATE!!!!!!!!!!!!!!NOTE: DO NOT CHANGE THE TEMPLATE!!!!!!!!!!!!!!!!!!!
+ */
+
+@font-face {
+  font-family: AvenirLTStd_Black;
+  src: url("../fonts/AvenirLTStd_Black.ttf")
+}
+@font-face {
+  font-family: Avenir-HeavyOblique;
+  src: url("../fonts/Avenir-HeavyOblique.otf")
+}
+@font-face {
+  font-family: AvenirLTStd-Medium;
+  src: url("../fonts/AvenirLTStd-Medium.ttf")
+}
+@font-face {
+  font-family: AvenirLTStd-45Book;
+  src: url("../fonts/AvenirLTStd-45Book.ttf")
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  -webkit-backface-visibility: hidden;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+input, input:before, input:after {
+      -webkit-user-select: initial;
+      -khtml-user-select: initial;
+      -moz-user-select: initial;
+      -ms-user-select: initial;
+      user-select: initial;
+     } 
+
+sup, sub {
+  line-height: 0px;
+  position: relative;
+  font-size: 0.6em;
+  top: 0.05em;
+}
+a {
+  text-decoration: none !important;
+  font-style: normal !important;
+}
+.wrapper {
+  /*  font-family: gesta, sans-serif;*/
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  width: 1024px;
+  height: 768px;
+  background-size: contain;
+  visibility: hidden;
+  overflow: hidden;
+  color: #003a44;
+}
+#wrapperImg {
+  width: 1024px;
+  height: 768px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  visibility: visible;
+  z-index: 999;
+}
+.container {
+  width: 1024px;
+  height: 768px;
+  top: 0px;
+  left: 0px;
+  background: #ecf3f3;
+}
+.container, .wrapper div, .wrapper ul, .wrapper ol, .wrapper p, .wrapper footer, .wrapper aside, .wrapper section, .wrapper article, .wrapper nav {
+  position: absolute;
+}
+/* default ends here */
+/*content starts*/
+#splash_01 {
+  width: 1024px;
+  height: 768px;
+  background: url(../images/bg.png) no-repeat;
+  background-size: 1024px 768px;
+  left: 0px;
+  top: 0px;
+}
+#head1 {
+  font-size: 28px;
+  color: #ffffff;
+  top: 24px;
+  left: 245px;
+  letter-spacing: -0.6px;
+  font-family: AvenirLTStd_Black;
+text-shadow: 0 3px 6px rgb(0 0 0 / 29%);}
+.population {
+  position: absolute;
+  font-size: 13px;
+  color: #707070;
+  top: 123px;
+  left: 220px;
+  letter-spacing: -0.4px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+}
+.time {
+  position: absolute;
+  font-size: 13px;
+  color: #707070;
+  top: 168px;
+  left: 220px;
+  letter-spacing: -0.3px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+}
+.time-error {
+  position: absolute;
+  font-size: 13px;
+  color: #ed4d40;
+  top: 170px;
+  left: 625px;
+  letter-spacing: -0.3px;
+  font-family: AvenirLTStd_Black;
+  display: none;
+}
+.cohort {
+  position: absolute;
+  font-size: 13px;
+  color: #707070;
+  top: 213px;
+  left: 220px;
+  letter-spacing: -0.4px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+}
+.outcome {
+  position: absolute;
+  font-size: 13px;
+  color: #707070;
+  top: 123px;
+  left: 628px;
+  letter-spacing: -0.4px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+}
+#number {
+  font-size: 13px;
+  color: #ffffff;
+  top: 282px;
+  left: 211px;
+  font-family: AvenirLTStd_Black;
+  line-height: 15px;
+  width: 247px;
+  display: flex;
+  text-align: center;
+  /* align-content: center; */
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+#dapagliflozin1 {
+  font-size: 12px;
+  color: #005589;
+  top: 394px;
+  left: 241px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+  }
+#number > span{
+  
+vertical-align: middle;text-align: center;display: inline-block;padding: 10px;}
+#placebo1 {
+  font-size: 12px;
+  color: #005589;
+  top: 435px;
+  left: 241px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+  }
+#incremental1 {
+  font-size: 12px;
+  color: #005589;
+  top: 477px;
+  left: 241px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+  }
+#cv_death {
+  font-size: 13px;
+  color: #ffffff;
+  top: 280px;
+  left: 494px;
+  font-family: AvenirLTStd_Black;
+  display: flex;
+  text-align: center;
+  /* align-content: center; */
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 247px;
+  height: 51px;
+  text-align: center;
+  vertical-align: middle;
+  }
+
+
+#mean {
+  font-size: 13px;
+  color: #EF4130;
+  top: 337px;
+  left: 497px;
+  font-family: AvenirLTStd_Black;
+  letter-spacing: -0.3px;
+  width: 247px;
+  height: 45px;
+  text-align: left;
+  vertical-align: middle;
+  }
+#dapagliflozin2 {
+  font-size: 12px;
+  color: #005589;
+  top: 394px;
+  left: 528px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+  }
+#mean > span{
+  
+vertical-align: middle;
+    text-align: left;
+    padding: 10px 10px 10px 30px;
+    display: inline-block;}
+#placebo2 {
+  font-size: 12px;
+  color: #005589;
+  top: 425px;
+  left: 518px;
+  font-family: AvenirLTStd_Black;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+  text-transform: uppercase;
+  }
+#incremental2 {
+  font-size: 12px;
+  color: #005589;
+  top: 476px;
+  left: 528px;
+  font-family: AvenirLTStd_Black;
+  text-transform: uppercase;
+  }
+#infoBtn {
+  font-family: Avenir-HeavyOblique;
+  font-size: 13px;
+  color: #EF4130;
+  top: 560px;
+  left: 240px;
+  position: absolute;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  width: 247px;
+  height: 30px;
+  padding-left: 11px;
+  cursor: pointer;
+  }
+#disclaimerBtn {
+  font-family: Avenir-HeavyOblique;
+  font-size: 13px;
+  color: #EF4130;
+  top: 610px;
+  left: 553px;
+  position: absolute;
+  background: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+#dapaValue1 {
+  font-size: 12px;
+  color: #EF4130;
+  top: 394px;
+  left: 366px;
+  width: 75px;
+  text-align: center;
+  font-family: AvenirLTStd_Black;
+}
+#placeboValue1 {
+  font-size: 12px;
+  color: #EF4130;
+  top: 435px;
+  left: 366px;
+  width: 75px;
+  text-align: center;
+  font-family: AvenirLTStd_Black;
+}
+#incrementalValue1 {
+  font-size: 12px;
+  color: #EF4130;
+  top: 477px;
+  left: 366px;
+  width: 75px;
+  text-align: center;
+  font-family: AvenirLTStd_Black;
+}
+#dapaValue2 {
+  font-size: 12px;
+  color: #EF4130;
+  top: 394px;
+  left: 643px;
+  width: 75px;
+  text-align: center;
+  font-family: AvenirLTStd_Black;
+}
+#estimated {
+    position: absolute;
+    font-family: AvenirLTStd-Medium;
+    font-size: 18px;
+    top: 298px;
+    left: 838px;
+    color: #ffffff;
+}
+#placeboValue2 {
+  font-size: 12px;
+  color: #EF4130;
+  top: 435px;
+  left: 643px;
+  width: 75px;
+  text-align: center;
+  font-family: AvenirLTStd_Black;
+}
+#incrementalValue2 {
+  font-size: 12px;
+  color: #EF4130;
+  top: 477px;
+  left: 643px;
+  width: 75px;
+  text-align: center;
+  font-family: AvenirLTStd_Black;
+}
+#largeValue {
+	    font-size: 67px;
+    top: 315px;
+    left: 773px;
+    font-family: AvenirLTStd_Black;
+    text-shadow: 0px 0px 6px #70706f;
+    color: #F2F2F2;
+    width: 195px;
+    text-align: center;
+    height: 100px;
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#largeValue > span{
+  
+display: inline-block;padding: 10px;}
+#less_txt > span{
+  
+display: inline-block;padding: 10px;}
+#less_txt {
+  font-family: AvenirLTStd-Medium;
+  font-size: 16px;
+  color: #ffffff;
+  top: 413px;
+  left: 773px;
+  text-align: center;
+  line-height: 21px;
+  width: 211px;
+  text-align: center;
+  height: 68px;
+  }
+select.dropdown {
+  position: absolute;
+  font-family: AvenirLTStd-Medium;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  width: 234px;
+  padding: 5px 16px 6px 10px;
+  outline: 0px;
+  border-radius: 3px;
+  background-color: #d3d826;
+  appearance: none;
+  background-image: url(../images/arrow.png);
+  background-repeat: no-repeat;
+  background-position: 218px 10px;
+  background-size: 7px 4px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 1px 6px;
+  color: #3C3C3B;
+  }
+select.drop2{ background-position: 208px 10px;}
+select#population_options {
+  top: 118px;
+  left: 372px;
+  /* border: 1px solid #ed4d40; */
+}
+.time_horizon {
+  top: 165px;
+  left: 372px;
+  position: absolute;
+  font-family: 'AvenirLTStd-Medium';
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  width: 208px;
+  padding: 5px 16px 6px 10px;
+  outline: 0px;
+  border-radius: 3px;
+  background-color: #d3d826;
+  appearance: none;
+  background-size: 7px 4px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 1px 6px;
+  color: #3C3C3B;
+  text-align:
+  center;
+  }
+.patient_number {
+  top: 209px;
+  left: 371px;
+  position: absolute;
+  font-family: 'AvenirLTStd-Medium';
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  width: 208px;
+  padding: 5px 16px 6px 10px;
+  outline: 0px;
+  border-radius: 3px;
+  background-color: #d3d826;
+  appearance: none;
+  background-size: 7px 4px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 1px 6px;
+  color: #3C3C3B;
+  text-align:
+  center;
+  }
+select#cohort_options {
+  top: 212px;
+  left: 403px;
+}
+select#outcome_options {
+  top: 119px;
+  left: 762px;
+}
+
+select#outcome_options.outcome1{
+	width: 221px;
+}
+#disclaimer {
+    position: absolute;
+    font-family: AvenirLTStd-Medium;
+    top: 735px;
+    left: 267px;
+    font-size: 10px;
+}
+
+
+#info_popup {
+  width: 1024px;
+  height: 768px;
+  top: 0px;
+  left: 0px;
+  
+}
+#info_wrapper {
+  width: 884px;
+  height: 557px;
+  left: 71px;
+  top: 130px;
+  background-image:
+    url("../images/info_wrapper.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  visibility: hidden;
+}
+#info_overlay {
+  width: 1024px;
+  height: 768px;
+  top: 0px;
+  left: 0px;
+  background: #3C3C3B;
+  opacity: 0.9;
+  visibility: hidden;
+}
+#assumptions {
+  font-family: AvenirLTStd_Black;
+  color: #ffffff;
+  position: absolute;
+  top: 28px;
+  left: 47px;
+  font-size: 18px;
+}
+#limitations {
+  font-family: AvenirLTStd_Black;
+  color: #ffffff;
+  position: absolute;
+  top: 28px;
+  left: 479px;
+  font-size: 18px;
+}
+#assumptions_list {
+  top: 101px;
+  left: 68px;
+  font-family: AvenirLTStd-45Book;
+  font-size: 11px;
+  width: 330px;
+  line-height: 16px;
+}
+#assumptions_list li:first-child {
+  margin-top: 0px;
+}
+#assumptions_list li {
+  text-indent: -5px;
+  margin-top: 10px;
+}
+#assumptions_list li:first-child:before {}
+#assumptions_list li:before {
+  content: "";
+  background-image: url(../images/list.png);
+  display: inline-block;
+  width: 5px;
+  height: 2px;
+  position: relative;
+  left: -15px;
+  top: -2px;
+}
+#limitations_list {
+  top: 98px;
+  left: 501px;
+  font-family: AvenirLTStd-45Book;
+  font-size: 11px;
+  width: 296px;
+  line-height: 16px;
+}
+#limitations_list li:first-child {
+  margin-top: 0px;
+}
+#limitations_list li {
+  text-indent: -5px;
+  margin-top: 10px;
+}
+#limitations_list li:before {
+  content: "";
+  background-image: url(../images/list.png);
+  display: inline-block;
+  width: 5px;
+  height: 2px;
+  position: relative;
+  left: -17px;
+  top: -4px;
+}
+#close_info {
+  width: 37px;
+  height: 37px;
+  left: 821px;
+  top: 20px;
+  background-image:
+    url("../images/close.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+
+
+
+.globalclick {
+    display: block;
+    height: 137px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 185px;
+    cursor: pointer;
+}
+
+.highlight {
+  border:1px solid rgb(237, 77, 64);
+}
+
+
+
+
